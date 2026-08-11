@@ -1,0 +1,23 @@
+def longestConsecutive(nums):
+    num_set = set(nums)
+    longest = 0
+
+    for num in num_set:
+        if num - 1 not in num_set:
+            count = 1
+
+            while num + count in num_set:
+                count += 1
+
+            longest = max(longest, count)
+
+    return longest
+
+
+# Example 1
+nums = [2, 20, 4, 10, 3, 4, 5]
+print(longestConsecutive(nums))
+
+# Example 2
+nums = [0, 3, 2, 5, 4, 6, 1, 1]
+print(longestConsecutive(nums))
