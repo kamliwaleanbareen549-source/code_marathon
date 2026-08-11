@@ -1,0 +1,13 @@
+def isAnagram(s, t):
+    return sorted(s) == sorted(t)
+
+
+# Example 1
+s = "racecar"
+t = "carrace"
+print(isAnagram(s, t))
+
+# Example 2
+s = "jar"
+t = "jam"
+print(isAnagram(s, t))
