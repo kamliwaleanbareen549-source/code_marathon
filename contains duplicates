@@ -1,0 +1,22 @@
+arr = [4, 2, 5, 2, 3, 4, 4, 1]
+
+mp = {}
+
+# Store frequency of each element
+for x in arr:
+    if x in mp:
+        mp[x] += 1
+    else:
+        mp[x] = 1
+
+# Find the minimum key whose count > 1
+ans = float('inf')
+
+for key, value in mp.items():
+    if value > 1 and key < ans:
+        ans = key
+
+if ans == float('inf'):
+    print("No repeated element")
+else:
+    print("Minimum repeated element:", ans)
